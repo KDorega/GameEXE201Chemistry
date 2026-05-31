@@ -1,0 +1,644 @@
+fileFormatVersion: 2
+guid: e17cd4d72f15b184b81267caa4c43b99
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8172690363693929627
+    second: HoatAnhdoChatHCL_0
+  - first:
+      213: 3608592763983573348
+    second: HoatAnhdoChatHCL_1
+  - first:
+      213: 8249920669293381702
+    second: HoatAnhdoChatHCL_2
+  - first:
+      213: -726110189226386959
+    second: HoatAnhdoChatHCL_3
+  - first:
+      213: 8201613763363982542
+    second: HoatAnhdoChatHCL_4
+  - first:
+      213: -5634889172881320899
+    second: HoatAnhdoChatHCL_5
+  - first:
+      213: -594071835367979559
+    second: HoatAnhdoChatHCL_6
+  - first:
+      213: 1839321135039168198
+    second: HoatAnhdoChatHCL_7
+  - first:
+      213: 5417608952664008434
+    second: HoatAnhdoChatHCL_8
+  - first:
+      213: 5875729846562012360
+    second: HoatAnhdoChatHCL_9
+  - first:
+      213: -968341634889057144
+    second: HoatAnhdoChatHCL_10
+  - first:
+      213: 7173734909038601536
+    second: HoatAnhdoChatHCL_11
+  - first:
+      213: 2345625934625369143
+    second: HoatAnhdoChatHCL_12
+  - first:
+      213: 8022920763377012342
+    second: HoatAnhdoChatHCL_13
+  - first:
+      213: 5870014929953750228
+    second: HoatAnhdoChatHCL_14
+  - first:
+      213: 6859203871977092612
+    second: HoatAnhdoChatHCL_15
+  - first:
+      213: -3530490432372114373
+    second: HoatAnhdoChatHCL_16
+  - first:
+      213: 1844697114931263723
+    second: HoatAnhdoChatHCL_17
+  - first:
+      213: -4245552622759593843
+    second: HoatAnhdoChatHCL_18
+  - first:
+      213: -5006004350792071606
+    second: HoatAnhdoChatHCL_19
+  - first:
+      213: -2415945811254627321
+    second: HoatAnhdoChatHCL_20
+  - first:
+      213: -1823581320596289025
+    second: HoatAnhdoChatHCL_21
+  - first:
+      213: 4982607324628922780
+    second: HoatAnhdoChatHCL_22
+  - first:
+      213: 5694655589654932334
+    second: HoatAnhdoChatHCL_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 14
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_0
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 456
+        width: 48
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b941c33c59a3b6170800000000000000
+      internalID: 8172690363693929627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 456
+        width: 48
+        height: 103
+      alignment: 9
+      pivot: {x: 0.49350134, y: 0.46668753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461394ceffb441230800000000000000
+      internalID: 3608592763983573348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 325
+        width: 112
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6488266832b9d7270800000000000000
+      internalID: 8249920669293381702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 160
+        width: 55
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f99e5741a65ce5f0800000000000000
+      internalID: -726110189226386959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 456
+        width: 49
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eccc346834cf1d170800000000000000
+      internalID: 8201613763363982542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 456
+        width: 48
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34d6b5f62adcc1b0800000000000000
+      internalID: -5634889172881320899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 456
+        width: 46
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5067815, y: 0.45179304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5c3d130de61c7f0800000000000000
+      internalID: -594071835367979559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_7
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 456
+        width: 47
+        height: 119
+      alignment: 9
+      pivot: {x: 0.53318363, y: 0.45806038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ceb0e1c3d4968910800000000000000
+      internalID: 1839321135039168198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 325
+        width: 118
+        height: 90
+      alignment: 9
+      pivot: {x: 0.697417, y: 0.38999397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c773fd962cf82f0800000000000000
+      internalID: -968341634889057144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 317
+        width: 121
+        height: 89
+      alignment: 9
+      pivot: {x: 0.6828964, y: 0.3233221}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ce9412c565d8020800000000000000
+      internalID: 2345625934625369143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 130
+        height: 125
+      alignment: 9
+      pivot: {x: 0.6075166, y: 0.28568348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e41325de3275f60800000000000000
+      internalID: 8022920763377012342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 160
+        width: 144
+        height: 132
+      alignment: 9
+      pivot: {x: 0.66581684, y: 0.26175252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcf1266a7b767150800000000000000
+      internalID: 5870014929953750228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_17
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 109
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be87aad904ea99910800000000000000
+      internalID: 1844697114931263723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_18
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 102
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88bf2d2264c415c0800000000000000
+      internalID: -4245552622759593843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_19
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 8
+        width: 52
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a468afed099178ab0800000000000000
+      internalID: -5006004350792071606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_20
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 8
+        width: 52
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 704339bb516d87ed0800000000000000
+      internalID: -2415945811254627321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_21
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 8
+        width: 50
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff902de537651b6e0800000000000000
+      internalID: -1823581320596289025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_22
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 8
+        width: 52
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.5962811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9134c776f6c52540800000000000000
+      internalID: 4982607324628922780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoatAnhdoChatHCL_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 8
+        width: 120
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b2393561b770f40800000000000000
+      internalID: 5694655589654932334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ab236a4719fcec5449e61fcf8425b2d3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      1: -968341634889057144
+      2: 2345625934625369143
+      3: 8022920763377012342
+      4: 5870014929953750228
+      HoatAnhdoChatHCL_0: 8172690363693929627
+      HoatAnhdoChatHCL_1: 3608592763983573348
+      HoatAnhdoChatHCL_11: 7173734909038601536
+      HoatAnhdoChatHCL_15: 6859203871977092612
+      HoatAnhdoChatHCL_16: -3530490432372114373
+      HoatAnhdoChatHCL_17: 1844697114931263723
+      HoatAnhdoChatHCL_18: -4245552622759593843
+      HoatAnhdoChatHCL_19: -5006004350792071606
+      HoatAnhdoChatHCL_2: 8249920669293381702
+      HoatAnhdoChatHCL_20: -2415945811254627321
+      HoatAnhdoChatHCL_21: -1823581320596289025
+      HoatAnhdoChatHCL_22: 4982607324628922780
+      HoatAnhdoChatHCL_23: 5694655589654932334
+      HoatAnhdoChatHCL_4: 8201613763363982542
+      HoatAnhdoChatHCL_5: -5634889172881320899
+      HoatAnhdoChatHCL_6: -594071835367979559
+      HoatAnhdoChatHCL_7: 1839321135039168198
+      HoatAnhdoChatHCL_8: 5417608952664008434
+      HoatAnhdoChatHCL_9: 5875729846562012360
+      final: -726110189226386959
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections; // THÊM DÒNG NÀY ĐỂ DÙNG COROUTINE
 
 public class PracticeManager : MonoBehaviour
 {
     public static PracticeManager instance;
-
+    public GameObject nutExitLab;
     public GameObject thongBao;
 
     private bool daLamBaO = false;
@@ -51,7 +52,6 @@ public class PracticeManager : MonoBehaviour
     public void CompleteBaO()
     {
         daLamBaO = true;
-
         CheckComplete();
     }
 
@@ -61,7 +61,6 @@ public class PracticeManager : MonoBehaviour
     public void CompleteNa2O()
     {
         daLamNa2O = true;
-
         CheckComplete();
     }
 
@@ -81,20 +80,34 @@ public class PracticeManager : MonoBehaviour
             !daThongBao
         )
         {
+            // Đánh dấu là đã thông báo ngay lập tức để không bị gọi trùng lặp lại nhiều lần
             daThongBao = true;
 
-            thongBao.SetActive(true);
-
-            Debug.Log("HOAN THANH THUC HANH");
-
-            // SAU NÀY:
-            // gửi điểm lên DB ở đây
-            int score = 100; // Điểm số thực hành, có thể thay đổi tùy logic
-#if UNITY_WEBGL && !UNITY_EDITOR
-            SendPracticeComplete(score);
-#else
-            Debug.Log($"[Mock WebGL] Gửi điểm: {score}");
-#endif
+            // Gọi hàm đợi 2 giây
+            StartCoroutine(ShowNotificationDelay(4f));
         }
+    }
+
+    // Hàm đếm ngược thời gian
+    IEnumerator ShowNotificationDelay(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        thongBao.SetActive(true);
+
+        if (nutExitLab != null)
+        {
+            nutExitLab.SetActive(true);
+        }
+
+        Debug.Log("HOAN THANH THUC HANH");
+
+        int score = 100;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    SendPracticeComplete(score);
+#else
+        Debug.Log($"[Mock WebGL] Gửi điểm: {score}");
+#endif
     }
 }

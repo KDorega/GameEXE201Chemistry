@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ReactionFrames : MonoBehaviour
 {
@@ -14,8 +15,9 @@ public class ReactionFrames : MonoBehaviour
     public float frameDelay = 0.1f;
 
     public GameObject infoButton;
-
+    public bool reactionFinished = false;
     private bool reacted = false;
+    
     private string reactionType = "";
     public AudioSource audioSource;
 
@@ -41,6 +43,17 @@ public class ReactionFrames : MonoBehaviour
 
             reactionType = "BaO";
 
+            ItemInfo itemInfo = GetComponent<ItemInfo>();
+
+            if (itemInfo != null)
+            {
+                itemInfo.SetInfo(
+                    "Tên: Dung dịch Bari Hydroxit (Ba(OH)<sub>2</sub>)\n\n" +
+                    "Trạng thái: Dung dịch bazơ mạnh.\n\n" +
+                    "Lưu ý: Có tính ăn mòn và gây kích ứng da."
+                );
+            }
+
             Destroy(other.gameObject);
             PracticeManager.instance.CompleteBaO();
             StartCoroutine(PlayReaction(reactionFramesBaO, soundBaO));
@@ -52,6 +65,17 @@ public class ReactionFrames : MonoBehaviour
             reacted = true;
 
             reactionType = "Na2O";
+
+            ItemInfo itemInfo = GetComponent<ItemInfo>();
+
+            if (itemInfo != null)
+            {
+                itemInfo.SetInfo(
+                    "Tên: Dung dịch Natri Hydroxit (NaOH)\n\n" +
+                    "Trạng thái: Dung dịch bazơ mạnh.\n\n" +
+                    "Lưu ý: Có khả năng gây bỏng hóa học."
+                );
+            }
 
             Destroy(other.gameObject);
             PracticeManager.instance.CompleteNa2O();
@@ -140,15 +164,37 @@ public class ReactionFrames : MonoBehaviour
 
             audioSource.volume = 1f;
         }
-
-        // ===== HIỆN NÚT i =====
-        if (infoButton != null)
-        {
-            infoButton.SetActive(true);
-        }
+        reactionFinished = true;
+        
     }
     public string GetReactionType()
     {
         return reactionType;
+    }
+    private void OnMouseDown()
+    {
+        if (!reactionFinished) return;
+
+        Vector2 mousePos =
+            Camera.main.ScreenToWorldPoint(
+                Mouse.current.position.ReadValue()
+            );
+
+        RaycastHit2D hit =
+            Physics2D.Raycast(mousePos, Vector2.zero);
+
+        // Nếu đang click vào nút i thì bỏ qua
+        if (
+            hit.collider != null &&
+            hit.collider.gameObject == infoButton
+        )
+        {
+            return;
+        }
+
+        if (infoButton != null)
+        {
+            infoButton.SetActive(!infoButton.activeSelf);
+        }
     }
 }

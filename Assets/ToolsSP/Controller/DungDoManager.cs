@@ -11,7 +11,13 @@ public class DungDoManager : MonoBehaviour
     public GameObject o_BaO;
 
     public GameObject o_Na2O;
+    public GameObject o_HCL;
+    public GameObject o_CocRong;
+    public GameObject nutLayLoOngNghiemObject;
 
+    public GameObject nutLoDungHoaChatObject;
+    public GameObject o_KhayDungHoaChat;
+    public GameObject nutBamX;
     [Header("Buttons")]
     public SpriteRenderer nutLoDungHoaChat;
 
@@ -36,7 +42,8 @@ public class DungDoManager : MonoBehaviour
 
         // HIỆN item
         o_CocNuoc.SetActive(true);
-
+        o_KhayDungHoaChat.SetActive(true);
+        o_CocRong.SetActive(true);
         // Đổi màu nút
         nutLayLoOngNghiem.color = darkColor;
 
@@ -60,13 +67,30 @@ public class DungDoManager : MonoBehaviour
 
         o_Na2O.SetActive(true);
 
+        o_HCL.SetActive(true);
+
         // Đổi màu nút
         nutLoDungHoaChat.color = darkColor;
 
         // Tắt collider tủ
         tuCollider.enabled = false;
-    }
 
+
+    }
+    public void CloseInventory()
+    {
+        // Ẩn toàn bộ item
+        ResetAll();
+
+        // Ẩn 2 nút tab
+        nutLayLoOngNghiemObject.SetActive(false);
+
+        nutLoDungHoaChatObject.SetActive(false);
+
+        nutBamX.SetActive(false);
+        // Bật lại collider của tủ
+        tuCollider.enabled = true;
+    }
     // =========================
     // RESET TOÀN BỘ
     // =========================
@@ -74,9 +98,10 @@ public class DungDoManager : MonoBehaviour
     {
         // Ẩn toàn bộ item
         oDungDoCongCu.SetActive(false);
-
+        o_KhayDungHoaChat.SetActive(false);
         o_CocNuoc.SetActive(false);
-
+        o_CocRong.SetActive(false);
+        o_HCL.SetActive(false);
         o_BaO.SetActive(false);
 
         o_Na2O.SetActive(false);

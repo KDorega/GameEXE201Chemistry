@@ -1,11 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TuDungController : MonoBehaviour
+public class NutBamThoai : MonoBehaviour
 {
-    public GameObject nutLayLoOngNghiem;
-    public GameObject NutLoDungHoaChat;
-    public GameObject oDungDoCongCu;
+    public LabIntroManager introManager;
 
     void Update()
     {
@@ -21,12 +19,10 @@ public class TuDungController : MonoBehaviour
 
             if (
                 hit.collider != null &&
-                hit.collider.gameObject == gameObject &&
-                !oDungDoCongCu.activeSelf
+                hit.collider.gameObject == gameObject
             )
             {
-                nutLayLoOngNghiem.SetActive(true);
-                NutLoDungHoaChat.SetActive(true);
+                introManager.NextMessage();
             }
         }
     }

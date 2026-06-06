@@ -83,6 +83,7 @@
     <Compile Include="Assets\ToolsSP\Controller\DungDoManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\ToolsSP\Controller\HCLCupReaction.cs" />
+    <Compile Include="Assets\ToolsSP\Controller\QuestManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\ToolsSP\Controller\NutBamXController.cs" />

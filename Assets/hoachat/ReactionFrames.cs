@@ -12,7 +12,7 @@ public class ReactionFrames : MonoBehaviour
     // Frame của Na2O
     public Sprite[] reactionFramesNa2O;
 
-    // ===== BỔ SUNG: Frame của CaO =====
+    // ===== Frame của CaO =====
     public Sprite[] reactionFramesCaO;
 
     public float frameDelay = 0.1f;
@@ -27,7 +27,7 @@ public class ReactionFrames : MonoBehaviour
     public AudioClip soundBaO;
     public AudioClip soundNa2O;
 
-    // ===== BỔ SUNG: Âm thanh của CaO =====
+    // ===== Âm thanh của CaO =====
     public AudioClip soundCaO;
 
     private void Start()
@@ -42,7 +42,9 @@ public class ReactionFrames : MonoBehaviour
     {
         if (reacted) return;
 
-        // BaO
+        // ==========================================
+        // 1. XỬ LÝ PHẢN ỨNG BAO
+        // ==========================================
         if (other.CompareTag("BaO"))
         {
             reacted = true;
@@ -59,11 +61,17 @@ public class ReactionFrames : MonoBehaviour
             }
 
             Destroy(other.gameObject);
-            PracticeManager.instance.CompleteBaO();
+
+            // CẬP NHẬT ĐỒNG BỘ: Báo sang QuestManager để bật dấu tick và tính điểm
+            QuestManager qm = FindFirstObjectByType<QuestManager>();
+            if (qm != null) qm.CompleteChemical("BaO");
+
             StartCoroutine(PlayReaction(reactionFramesBaO, soundBaO));
         }
 
-        // Na2O
+        // ==========================================
+        // 2. XỬ LÝ PHẢN ỨNG NA2O
+        // ==========================================
         else if (other.CompareTag("Na2O"))
         {
             reacted = true;
@@ -80,11 +88,17 @@ public class ReactionFrames : MonoBehaviour
             }
 
             Destroy(other.gameObject);
-            PracticeManager.instance.CompleteNa2O();
+
+            // CẬP NHẬT ĐỒNG BỘ: Báo sang QuestManager để bật dấu tick và tính điểm
+            QuestManager qm = FindFirstObjectByType<QuestManager>();
+            if (qm != null) qm.CompleteChemical("Na2O");
+
             StartCoroutine(PlayReaction(reactionFramesNa2O, soundNa2O));
         }
 
-        // ===== BỔ SUNG: Xử lý va chạm với CaO =====
+        // ==========================================
+        // 3. XỬ LÝ PHẢN ỨNG CAO
+        // ==========================================
         else if (other.CompareTag("CaO"))
         {
             reacted = true;
@@ -101,7 +115,11 @@ public class ReactionFrames : MonoBehaviour
             }
 
             Destroy(other.gameObject);
-            PracticeManager.instance.CompleteCaO();
+
+            // CẬP NHẬT ĐỒNG BỘ: Báo sang QuestManager để bật dấu tick và tính điểm
+            QuestManager qm = FindFirstObjectByType<QuestManager>();
+            if (qm != null) qm.CompleteChemical("CaO");
+
             StartCoroutine(PlayReaction(reactionFramesCaO, soundCaO));
         }
     }
@@ -121,33 +139,24 @@ public class ReactionFrames : MonoBehaviour
         {
             spriteRenderer.sprite = frames[i];
 
-            // ===== CHIA 3 GIAI ĐOẠN =====
+            // ===== CHIA 3 GIAI ĐOẠN ĐIỀU CHỈNH VOLUME VỚI ĐỘ DỐC MƯỢT MÀ =====
             float volume = 1f;
             float progress = (float)i / (totalFrames - 1);
 
-            // =========================
-            // 1. ĐẦU: 0% -> 30% (tăng dần)
-            // =========================
             if (progress < 0.3f)
             {
                 volume = Mathf.Lerp(0.1f, 1f, progress / 0.3f);
             }
-            // =========================
-            // 2. GIỮA: 30% -> 70% (volume max)
-            // =========================
             else if (progress < 0.7f)
             {
                 volume = 1f;
             }
-            // =========================
-            // 3. CUỐI: 70% -> 100% (giảm dần)
-            // =========================
             else
             {
                 volume = Mathf.Lerp(1f, 0f, (progress - 0.7f) / 0.3f);
             }
 
-            // GÁN VOLUME
+            // GÁN VOLUME THỰC TẾ
             if (audioSource != null)
             {
                 audioSource.volume = volume;

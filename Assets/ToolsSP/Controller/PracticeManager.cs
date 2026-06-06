@@ -1,12 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections; // THÊM DÒNG NÀY ĐỂ DÙNG COROUTINE
+using TMPro; // THÊM DÒNG NÀY ĐỂ SỬ DỤNG TEXTMESHPRO
 
 public class PracticeManager : MonoBehaviour
 {
     public static PracticeManager instance;
     public GameObject nutExitLab;
-    public GameObject thongBao;
+    public GameObject thongBao; // Đây chính là TThongbaoE của bạn
+
+    // ===== BỔ SUNG: Ô chứa linh hồn hiển thị Text trên màn hình =====
+    public TextMeshProUGUI diemSoText;
 
     private bool daLamBaO = false;
     private bool daLamNa2O = false;
@@ -19,6 +23,15 @@ public class PracticeManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
+        // Khởi tạo đầu game, đảm bảo text hiển thị là 0 điểm
+        if (diemSoText != null)
+        {
+            diemSoText.text = "Điểm: 0";
+        }
     }
 
     void Update()
@@ -80,20 +93,43 @@ public class PracticeManager : MonoBehaviour
 
     void CheckComplete()
     {
+        // Tính toán và hiển thị điểm cập nhật theo thời gian thực ra UI màn hình
+        int currentProgressScore = CalculateCurrentScore();
+        if (diemSoText != null)
+        {
+            diemSoText.text = "Điểm: " + currentProgressScore;
+        }
+
         // ===== CẬP NHẬT ĐIỀU KIỆN: Người chơi phải làm đủ cả 3 chất BaO, Na2O và CaO =====
         if (
             daLamBaO &&
             daLamNa2O &&
-            daLamCaO && // Thêm điều kiện này
+            daLamCaO &&
             !daThongBao
         )
         {
-            // Đánh dấu là đã thông báo ngay lập tức để không bị gọi trùng lặp lại nhiều lần
             daThongBao = true;
-
-            // Gọi hàm đợi 4 giây (như cấu hình trong Coroutine của bạn)
             StartCoroutine(ShowNotificationDelay(4f));
         }
+        else
+        {
+            // Cập nhật tiến trình điểm thử nghiệm lên Console để kiểm thử nhanh
+            Debug.Log($"[Tiến độ] Điểm hiện tại đạt được: {currentProgressScore}/100");
+        }
+    }
+
+    // Hàm bổ sung: Tính điểm động dựa trên số lượng chất thực tế đã hoàn thành
+    private int CalculateCurrentScore()
+    {
+        int completedCount = 0;
+        if (daLamBaO) completedCount++;
+        if (daLamNa2O) completedCount++;
+        if (daLamCaO) completedCount++;
+
+        if (completedCount == 1) return 33;
+        if (completedCount == 2) return 66;
+        if (completedCount == 3) return 100;
+        return 0;
     }
 
     // Hàm đếm ngược thời gian
@@ -101,21 +137,25 @@ public class PracticeManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        thongBao.SetActive(true);
+        thongBao.SetActive(true); // Kích hoạt bảng thông báo chiến thắng thành công công việc
 
         if (nutExitLab != null)
         {
             nutExitLab.SetActive(true);
         }
 
-        Debug.Log("HOAN THANH THUC HANH");
+        Debug.Log("HOAN THANH THUC HANH - ĐẠT ĐIỂM TỐI ĐA");
 
-        int score = 100;
+        int score = CalculateCurrentScore();
+        if (diemSoText != null)
+        {
+            diemSoText.text = "Điểm: " + score;
+        }
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     SendPracticeComplete(score);
 #else
-        Debug.Log($"[Mock WebGL] Gửi điểm: {score}");
+        Debug.Log($"[Mock WebGL] Gửi điểm hoàn thành: {score}");
 #endif
     }
 }

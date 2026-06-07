@@ -364,15 +364,15 @@ MonoBehaviour:
   - {fileID: -3388550062715291574, guid: 7d8dfcb6db203274bb03d33be80597f3, type: 3}
   - {fileID: -3586797651344582826, guid: 7d8dfcb6db203274bb03d33be80597f3, type: 3}
   reactionFramesCaO:
+  - {fileID: 8517361268384828400, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: -5934564403480717014, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: 1896272143618613616, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: -2424495174980672479, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: 3097313070853984961, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: 3021254271753793314, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: 7094634749610835777, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
-  - {fileID: 8517361268384828400, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   - {fileID: -3699048492817287880, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
-  frameDelay: 0.16
+  frameDelay: 0.2
   infoButton: {fileID: 4247408098250039352}
   reactionFinished: 0
   audioSource: {fileID: 3166170859907564923}

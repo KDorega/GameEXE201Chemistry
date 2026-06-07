@@ -7,7 +7,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Sprite[] animationFrames;
 
     [Header("--- UI Dấu Tích & Canvas Group ---")]
-    [SerializeField] private CanvasGroup canvasGroupChue; // Kéo Object 'Canvas_Chữ' vào đây
+    [SerializeField] private CanvasGroup canvasGroupChue;
+
     [SerializeField] private GameObject tickBaO;
     [SerializeField] private GameObject tickNa2O;
     [SerializeField] private GameObject tickCaO;
@@ -17,66 +18,102 @@ public class QuestManager : MonoBehaviour
     [HideInInspector] public bool isCaODone = false;
 
     private SpriteRenderer spriteRenderer;
+    private QuestPanelMover mover;
+
     private bool isExpanded = false;
     private bool isAnimating = false;
 
+    private float lastClickTime = -1f;
+
+    private const float DOUBLE_CLICK_TIME = 0.3f;
+
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer =
+            GetComponent<SpriteRenderer>();
+
+        mover =
+            GetComponent<QuestPanelMover>();
     }
 
     void Start()
     {
-        if (animationFrames.Length >= 4) spriteRenderer.sprite = animationFrames[3];
+        if (animationFrames.Length >= 4)
+        {
+            spriteRenderer.sprite =
+                animationFrames[3];
+        }
 
-        // Đầu game ẩn toàn bộ chữ và dấu tích bằng cách cho Alpha = 0 (Trong suốt)
         if (canvasGroupChue != null)
         {
             canvasGroupChue.alpha = 0f;
             canvasGroupChue.interactable = false;
             canvasGroupChue.blocksRaycasts = false;
         }
+
         UpdateTickDisplay();
     }
 
-    // Tự động chạy khi người chơi click chuột vào khu vực Box Collider 2D của bảng nhiệm vụ
-    void OnMouseDown()
+    void OnMouseUpAsButton()
     {
-        if (isAnimating) return;
+        if (isAnimating)
+            return;
+
+        if (
+            mover != null &&
+            mover.IsDragging()
+        )
+            return;
+
         isExpanded = !isExpanded;
-        StartCoroutine(PlayFoldAnimation(isExpanded));
+
+        StartCoroutine(
+            PlayFoldAnimation(isExpanded)
+        );
     }
 
-    private IEnumerator PlayFoldAnimation(bool expand)
+    IEnumerator PlayFoldAnimation(bool expand)
     {
         isAnimating = true;
 
         if (expand)
         {
-            // Mở bảng: Đổi hình từ Nhỏ đến Lớn (Hình 4 -> 3 -> 2 -> 1)
             for (int i = 3; i >= 0; i--)
             {
-                spriteRenderer.sprite = animationFrames[i];
-                yield return new WaitForSeconds(0.04f);
+                spriteRenderer.sprite =
+                    animationFrames[i];
+
+                yield return new WaitForSeconds(
+                    0.04f
+                );
             }
-            // Mở xong thì hiện chữ TextMeshPro lên mượt mà
-            canvasGroupChue.alpha = 1f;
-            canvasGroupChue.interactable = true;
-            canvasGroupChue.blocksRaycasts = true;
+
+            if (canvasGroupChue != null)
+            {
+                canvasGroupChue.alpha = 1f;
+                canvasGroupChue.interactable = true;
+                canvasGroupChue.blocksRaycasts = true;
+            }
+
             UpdateTickDisplay();
         }
         else
         {
-            // Thu bảng: Ẩn chữ đi trước
-            canvasGroupChue.alpha = 0f;
-            canvasGroupChue.interactable = false;
-            canvasGroupChue.blocksRaycasts = false;
+            if (canvasGroupChue != null)
+            {
+                canvasGroupChue.alpha = 0f;
+                canvasGroupChue.interactable = false;
+                canvasGroupChue.blocksRaycasts = false;
+            }
 
-            // Đổi hình từ Lớn về Nhỏ (Hình 1 -> 2 -> 3 -> 4)
             for (int i = 0; i <= 3; i++)
             {
-                spriteRenderer.sprite = animationFrames[i];
-                yield return new WaitForSeconds(0.04f);
+                spriteRenderer.sprite =
+                    animationFrames[i];
+
+                yield return new WaitForSeconds(
+                    0.04f
+                );
             }
         }
 
@@ -85,29 +122,36 @@ public class QuestManager : MonoBehaviour
 
     public void UpdateTickDisplay()
     {
-        if (tickBaO) tickBaO.SetActive(isBaODone);
-        if (tickNa2O) tickNa2O.SetActive(isNa2ODone);
-        if (tickCaO) tickCaO.SetActive(isCaODone);
+        if (tickBaO)
+            tickBaO.SetActive(isBaODone);
+
+        if (tickNa2O)
+            tickNa2O.SetActive(isNa2ODone);
+
+        if (tickCaO)
+            tickCaO.SetActive(isCaODone);
     }
 
-    // Hàm gọi từ hệ thống tương tác hóa chất khi người chơi làm thành công một chất
     public void CompleteChemical(string name)
     {
-        if (PracticeManager.instance == null) return;
+        if (PracticeManager.instance == null)
+            return;
 
         switch (name.ToUpper())
         {
             case "BAO":
                 isBaODone = true;
-                PracticeManager.instance.CompleteBaO(); // Báo sang PracticeManager
+                PracticeManager.instance.CompleteBaO();
                 break;
+
             case "NA2O":
                 isNa2ODone = true;
-                PracticeManager.instance.CompleteNa2O(); // Báo sang PracticeManager
+                PracticeManager.instance.CompleteNa2O();
                 break;
+
             case "CAO":
                 isCaODone = true;
-                PracticeManager.instance.CompleteCaO(); // Báo sang PracticeManager
+                PracticeManager.instance.CompleteCaO();
                 break;
         }
 

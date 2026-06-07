@@ -18,7 +18,11 @@ public class LabIntroManager : MonoBehaviour
 
         "Vì đây là công cụ demo của Lab nên đôi lúc có những chất không xác định được.\n\n Nhưng đừng lo vì tôi có thêm 1 nút 'i' trên đầu sản phẩm cuối cùng phản ứng giúp bạn hiểu rõ hơn.",
 
-        "Hãy đọc kỹ các thông tin an toàn trước khi sử dụng hóa chất.\n\n<color=red><b>KHÔNG THỰC HIỆN THÍ NGHIỆM NGOÀI ĐỜI THỰC KHI KHÔNG CÓ NGƯỜI GIÁM SÁT.</b></color>",
+        "Hãy đọc kỹ các thông tin trước khi sử dụng hóa chất.\n\n<color=red><b>KHÔNG THỰC HIỆN THÍ NGHIỆM NGOÀI ĐỜI THỰC KHI KHÔNG CÓ NGƯỜI GIÁM SÁT.</b></color>",
+        
+        "Tôi sẽ giao nhiệm vụ cho bạn thực hành lấy điểm. \n\nTên bảng 'mục tiêu nhiệm vụ', bạn chỉ cần hoàn thành nhiệm vụ được giao là có điểm.",
+        
+        "Bạn có thể duy chuyển bảng bằng cách giữ và kéo chuột hoặc là phóng to hay thu nhỏ lại bằng click chuột 1 lần",
 
         "Đó là tất cả những gì bạn cần biết.\n\nChúc bạn thực hành vui vẻ!"
     };

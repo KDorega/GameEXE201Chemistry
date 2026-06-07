@@ -4,16 +4,12 @@ using UnityEngine.UI;
 
 public class InfoButton : MonoBehaviour
 {
-    private static GameObject bangGiaiThich;
-
-    private static CanvasGroup canvasGroup;
+    private static BanGiaithichAnimation bangGiaiThich;
 
     private SpriteRenderer sr;
-
+    private static InfoButton currentButton;
     private ReactionFrames reactionFrames;
-    // STATIC
-    private static bool isOpen = false;
-
+    
     private Color32 darkColor = new Color32(45, 45, 45, 255);
 
     void Start()
@@ -24,9 +20,8 @@ public class InfoButton : MonoBehaviour
 
         if (bangGiaiThich == null)
         {
-            bangGiaiThich = GameObject.Find("BanGiaithichDayDu");
-
-            canvasGroup = bangGiaiThich.GetComponent<CanvasGroup>();
+            bangGiaiThich =
+                FindObjectOfType<BanGiaithichAnimation>(true);
         }
     }
 
@@ -54,42 +49,48 @@ public class InfoButton : MonoBehaviour
 
     void ToggleInfo()
     {
-        isOpen = !isOpen;
-
-        if (isOpen)
+        // Bấm lại chính nút đang mở
+        if (currentButton == this)
         {
-            // ĐỔI TEXT ĐÚNG THEO CỐC
-            if (reactionFrames != null)
-            {
-                string type = reactionFrames.GetReactionType();
+            currentButton = null;
 
-                if (type == "BaO")
-                {
-                    ReactionInfoManager.instance.ShowBaOInfo();
-                }
-                else if (type == "Na2O")
-                {
-                    ReactionInfoManager.instance.ShowNa2OInfo();
-                }
-            }
-
-            sr.color = darkColor;
-
-            canvasGroup.alpha = 1;
-
-            canvasGroup.interactable = true;
-
-            canvasGroup.blocksRaycasts = true;
-        }
-        else
-        {
             sr.color = Color.white;
 
-            canvasGroup.alpha = 0;
+            bangGiaiThich.Toggle();
 
-            canvasGroup.interactable = false;
+            return;
+        }
 
-            canvasGroup.blocksRaycasts = false;
+        // Nếu có nút khác đang mở
+        if (currentButton != null)
+        {
+            currentButton.sr.color = Color.white;
+        }
+
+        currentButton = this;
+
+        sr.color = darkColor;
+
+        string type =
+            reactionFrames.GetReactionType();
+
+        if (type == "BaO")
+        {
+            ReactionInfoManager.instance.ShowBaOInfo();
+        }
+        else if (type == "Na2O")
+        {
+            ReactionInfoManager.instance.ShowNa2OInfo();
+        }
+        else if (type == "CaO")
+        {
+            ReactionInfoManager.instance.ShowCaOInfo();
+        }
+
+        // Chỉ mở bảng nếu bảng đang đóng
+        if (!bangGiaiThich.IsOpen())
+        {
+            bangGiaiThich.Toggle();
         }
     }
 }

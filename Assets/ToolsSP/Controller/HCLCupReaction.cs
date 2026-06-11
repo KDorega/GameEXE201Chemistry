@@ -8,17 +8,28 @@ public class HCLCupReaction : MonoBehaviour
     [Header("BaO + HCl")]
     public Sprite[] reactionFramesBaO;
     public Sprite[] reactionFramesNa2O;
+    public Sprite[] reactionFramesCaO;
     public AudioSource audioSource;
-
+    private string reactionType = "";
     public AudioClip soundBaO;
     public AudioClip soundNa2O;
+    public AudioClip soundCaO;
     public float frameDelay = 0.1f;
 
     [HideInInspector]
     public bool containsHCL = false;
 
     private bool reacted = false;
+    public GameObject infoButton;
 
+    private bool reactionFinished = false;
+    private void Start()
+    {
+        if (infoButton != null)
+        {
+            infoButton.SetActive(false);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (reacted) return;
@@ -29,9 +40,15 @@ public class HCLCupReaction : MonoBehaviour
         if (other.CompareTag("BaO"))
         {
             reacted = true;
-
+            reactionType = "BaCl2";
             Destroy(other.gameObject);
+            QuestManager qm =
+            FindFirstObjectByType<QuestManager>();
 
+            if (qm != null)
+            {
+                qm.CompleteChemical("BaO");
+            }
             ItemInfo itemInfo =
                 GetComponent<ItemInfo>();
 
@@ -56,9 +73,15 @@ public class HCLCupReaction : MonoBehaviour
         else if (other.CompareTag("Na2O"))
         {
             reacted = true;
-
+            reactionType = "NaCl";
             Destroy(other.gameObject);
+            QuestManager qm =
+            FindFirstObjectByType<QuestManager>();
 
+            if (qm != null)
+            {
+                qm.CompleteChemical("Na2O");
+            }
             ItemInfo itemInfo =
                 GetComponent<ItemInfo>();
 
@@ -75,6 +98,39 @@ public class HCLCupReaction : MonoBehaviour
                 PlayReaction(
                     reactionFramesNa2O,
                     soundNa2O
+                )
+            );
+        }
+        else if (other.CompareTag("CaO"))
+        {
+            reacted = true;
+            reactionType = "CaCl2";
+            Destroy(other.gameObject);
+
+            QuestManager qm =
+                FindFirstObjectByType<QuestManager>();
+
+            if (qm != null)
+            {
+                qm.CompleteChemical("CaO");
+            }
+
+            ItemInfo itemInfo =
+                GetComponent<ItemInfo>();
+
+            if (itemInfo != null)
+            {
+                itemInfo.SetInfo(
+                    "Tên: Dung dịch Canxi Clorua (CaCl<sub>2</sub>)\n\n" +
+                    "Trạng thái: Dung dịch muối.\n\n" +
+                    "Được tạo thành từ phản ứng giữa CaO và HCl."
+                );
+            }
+
+            StartCoroutine(
+                PlayReaction(
+                    reactionFramesCaO,
+                    soundCaO
                 )
             );
         }
@@ -150,5 +206,15 @@ public class HCLCupReaction : MonoBehaviour
 
             audioSource.volume = 1f;
         }
+        reactionFinished = true;
+
+        if (infoButton != null)
+        {
+            infoButton.SetActive(true);
+        }
+    }
+    public string GetReactionType()
+    {
+        return reactionType;
     }
 }

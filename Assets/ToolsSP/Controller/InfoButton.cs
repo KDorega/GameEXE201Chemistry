@@ -9,13 +9,14 @@ public class InfoButton : MonoBehaviour
     private SpriteRenderer sr;
     private static InfoButton currentButton;
     private ReactionFrames reactionFrames;
-    
+    private HCLCupReaction hclReaction;
     private Color32 darkColor = new Color32(45, 45, 45, 255);
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         reactionFrames = GetComponentInParent<ReactionFrames>();
+        hclReaction =GetComponentInParent<HCLCupReaction>();
         sr.color = Color.white;
 
         if (bangGiaiThich == null)
@@ -49,7 +50,6 @@ public class InfoButton : MonoBehaviour
 
     void ToggleInfo()
     {
-        // Bấm lại chính nút đang mở
         if (currentButton == this)
         {
             currentButton = null;
@@ -61,7 +61,6 @@ public class InfoButton : MonoBehaviour
             return;
         }
 
-        // Nếu có nút khác đang mở
         if (currentButton != null)
         {
             currentButton.sr.color = Color.white;
@@ -71,23 +70,48 @@ public class InfoButton : MonoBehaviour
 
         sr.color = darkColor;
 
-        string type =
-            reactionFrames.GetReactionType();
+        // ======================
+        // Cốc nước
+        // ======================
+        if (reactionFrames != null)
+        {
+            string type = reactionFrames.GetReactionType();
 
-        if (type == "BaO")
-        {
-            ReactionInfoManager.instance.ShowBaOInfo();
-        }
-        else if (type == "Na2O")
-        {
-            ReactionInfoManager.instance.ShowNa2OInfo();
-        }
-        else if (type == "CaO")
-        {
-            ReactionInfoManager.instance.ShowCaOInfo();
+            if (type == "BaO")
+            {
+                ReactionInfoManager.instance.ShowBaOInfo();
+            }
+            else if (type == "Na2O")
+            {
+                ReactionInfoManager.instance.ShowNa2OInfo();
+            }
+            else if (type == "CaO")
+            {
+                ReactionInfoManager.instance.ShowCaOInfo();
+            }
         }
 
-        // Chỉ mở bảng nếu bảng đang đóng
+        // ======================
+        // Cốc HCl
+        // ======================
+        else if (hclReaction != null)
+        {
+            string type = hclReaction.GetReactionType();
+
+            if (type == "BaCl2")
+            {
+                ReactionInfoManager.instance.ShowBaCl2Info();
+            }
+            else if (type == "NaCl")
+            {
+                ReactionInfoManager.instance.ShowNaClInfo();
+            }
+            else if (type == "CaCl2")
+            {
+                ReactionInfoManager.instance.ShowCaCl2Info();
+            }
+        }
+
         if (!bangGiaiThich.IsOpen())
         {
             bangGiaiThich.Toggle();

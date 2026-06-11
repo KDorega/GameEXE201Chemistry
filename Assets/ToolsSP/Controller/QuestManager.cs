@@ -23,25 +23,18 @@ public class QuestManager : MonoBehaviour
     private bool isExpanded = false;
     private bool isAnimating = false;
 
-    private float lastClickTime = -1f;
-
-    private const float DOUBLE_CLICK_TIME = 0.3f;
-
     void Awake()
     {
-        spriteRenderer =
-            GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
-        mover =
-            GetComponent<QuestPanelMover>();
+        mover = GetComponent<QuestPanelMover>();
     }
 
     void Start()
     {
         if (animationFrames.Length >= 4)
         {
-            spriteRenderer.sprite =
-                animationFrames[3];
+            spriteRenderer.sprite = animationFrames[3];
         }
 
         if (canvasGroupChue != null)
@@ -83,9 +76,7 @@ public class QuestManager : MonoBehaviour
                 spriteRenderer.sprite =
                     animationFrames[i];
 
-                yield return new WaitForSeconds(
-                    0.04f
-                );
+                yield return new WaitForSeconds(0.04f);
             }
 
             if (canvasGroupChue != null)
@@ -111,9 +102,7 @@ public class QuestManager : MonoBehaviour
                 spriteRenderer.sprite =
                     animationFrames[i];
 
-                yield return new WaitForSeconds(
-                    0.04f
-                );
+                yield return new WaitForSeconds(0.04f);
             }
         }
 
@@ -141,17 +130,17 @@ public class QuestManager : MonoBehaviour
         {
             case "BAO":
                 isBaODone = true;
-                PracticeManager.instance.CompleteBaO();
+                PracticeManager.instance.CompleteBaCl2();
                 break;
 
             case "NA2O":
                 isNa2ODone = true;
-                PracticeManager.instance.CompleteNa2O();
+                PracticeManager.instance.CompleteNaCl();
                 break;
 
             case "CAO":
                 isCaODone = true;
-                PracticeManager.instance.CompleteCaO();
+                PracticeManager.instance.CompleteCaCl2();
                 break;
         }
 

@@ -1,22 +1,23 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro; // THÊM DÒNG NÀY ĐỂ SỬ DỤNG TEXTMESHPRO
+using TMPro;
 
 public class PracticeManager : MonoBehaviour
 {
     public static PracticeManager instance;
-    public GameObject nutExitLab;
-    public GameObject thongBao; // Đây chính là TThongbaoE của bạn
 
-    // ===== BỔ SUNG: Ô chứa linh hồn hiển thị Text trên màn hình =====
+    public GameObject nutExitLab;
+
+    public GameObject thongBao;
+
     public TextMeshProUGUI diemSoText;
 
-    private bool daLamBaO = false;
-    private bool daLamNa2O = false;
+    private bool daLamBaCl2 = false;
 
-    // ===== BỔ SUNG: Trạng thái hoàn thành của CaO =====
-    private bool daLamCaO = false;
+    private bool daLamNaCl = false;
+
+    private bool daLamCaCl2 = false;
 
     private bool daThongBao = false;
 
@@ -27,7 +28,6 @@ public class PracticeManager : MonoBehaviour
 
     void Start()
     {
-        // Khởi tạo đầu game, đảm bảo text hiển thị là 0 điểm
         if (diemSoText != null)
         {
             diemSoText.text = "Điểm: 0";
@@ -36,15 +36,22 @@ public class PracticeManager : MonoBehaviour
 
     void Update()
     {
-        // Click tắt thông báo
         if (
             daThongBao &&
             thongBao.activeSelf &&
             Mouse.current.leftButton.wasPressedThisFrame
         )
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+            Vector2 mousePos =
+                Camera.main.ScreenToWorldPoint(
+                    Mouse.current.position.ReadValue()
+                );
+
+            RaycastHit2D hit =
+                Physics2D.Raycast(
+                    mousePos,
+                    Vector2.zero
+                );
 
             if (
                 hit.collider != null &&
@@ -57,35 +64,35 @@ public class PracticeManager : MonoBehaviour
     }
 
     // =========================
-    // BAO
+    // BaCl2
     // =========================
-    public void CompleteBaO()
+    public void CompleteBaCl2()
     {
-        daLamBaO = true;
+        daLamBaCl2 = true;
+
         CheckComplete();
     }
 
     // =========================
-    // NA2O
+    // NaCl
     // =========================
-    public void CompleteNa2O()
+    public void CompleteNaCl()
     {
-        daLamNa2O = true;
+        daLamNaCl = true;
+
         CheckComplete();
     }
 
     // =========================
-    // ===== BỔ SUNG: CAO =====
+    // CaCl2
     // =========================
-    public void CompleteCaO()
+    public void CompleteCaCl2()
     {
-        daLamCaO = true;
+        daLamCaCl2 = true;
+
         CheckComplete();
     }
 
-    // =========================
-    // KIỂM TRA HOÀN THÀNH
-    // =========================
 #if UNITY_WEBGL && !UNITY_EDITOR
     [System.Runtime.InteropServices.DllImport("__Internal")]
     private static extern void SendPracticeComplete(int score);
@@ -93,69 +100,93 @@ public class PracticeManager : MonoBehaviour
 
     void CheckComplete()
     {
-        // Tính toán và hiển thị điểm cập nhật theo thời gian thực ra UI màn hình
-        int currentProgressScore = CalculateCurrentScore();
+        int currentProgressScore =
+            CalculateCurrentScore();
+
         if (diemSoText != null)
         {
-            diemSoText.text = "Điểm: " + currentProgressScore;
+            diemSoText.text =
+                "Điểm: " +
+                currentProgressScore;
         }
 
-        // ===== CẬP NHẬT ĐIỀU KIỆN: Người chơi phải làm đủ cả 3 chất BaO, Na2O và CaO =====
         if (
-            daLamBaO &&
-            daLamNa2O &&
-            daLamCaO &&
+            daLamBaCl2 &&
+            daLamNaCl &&
+            daLamCaCl2 &&
             !daThongBao
         )
         {
             daThongBao = true;
-            StartCoroutine(ShowNotificationDelay(4f));
+
+            StartCoroutine(
+                ShowNotificationDelay(4f)
+            );
         }
         else
         {
-            // Cập nhật tiến trình điểm thử nghiệm lên Console để kiểm thử nhanh
-            Debug.Log($"[Tiến độ] Điểm hiện tại đạt được: {currentProgressScore}/100");
+            Debug.Log(
+                $"[Tiến độ] Điểm hiện tại đạt được: {currentProgressScore}/100"
+            );
         }
     }
 
-    // Hàm bổ sung: Tính điểm động dựa trên số lượng chất thực tế đã hoàn thành
     private int CalculateCurrentScore()
     {
         int completedCount = 0;
-        if (daLamBaO) completedCount++;
-        if (daLamNa2O) completedCount++;
-        if (daLamCaO) completedCount++;
 
-        if (completedCount == 1) return 33;
-        if (completedCount == 2) return 66;
-        if (completedCount == 3) return 100;
+        if (daLamBaCl2) completedCount++;
+
+        if (daLamNaCl) completedCount++;
+
+        if (daLamCaCl2) completedCount++;
+
+        if (completedCount == 1)
+            return 33;
+
+        if (completedCount == 2)
+            return 66;
+
+        if (completedCount == 3)
+            return 100;
+
         return 0;
     }
 
-    // Hàm đếm ngược thời gian
-    IEnumerator ShowNotificationDelay(float delayTime)
+    IEnumerator ShowNotificationDelay(
+        float delayTime
+    )
     {
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSeconds(
+            delayTime
+        );
 
-        thongBao.SetActive(true); // Kích hoạt bảng thông báo chiến thắng thành công công việc
+        thongBao.SetActive(true);
 
         if (nutExitLab != null)
         {
             nutExitLab.SetActive(true);
         }
 
-        Debug.Log("HOAN THANH THUC HANH - ĐẠT ĐIỂM TỐI ĐA");
+        Debug.Log(
+            "HOAN THANH THUC HANH - ĐẠT ĐIỂM TỐI ĐA"
+        );
 
-        int score = CalculateCurrentScore();
+        int score =
+            CalculateCurrentScore();
+
         if (diemSoText != null)
         {
-            diemSoText.text = "Điểm: " + score;
+            diemSoText.text =
+                "Điểm: " + score;
         }
 
 #if UNITY_WEBGL && !UNITY_EDITOR
-    SendPracticeComplete(score);
+        SendPracticeComplete(score);
 #else
-        Debug.Log($"[Mock WebGL] Gửi điểm hoàn thành: {score}");
+        Debug.Log(
+            $"[Mock WebGL] Gửi điểm hoàn thành: {score}"
+        );
 #endif
     }
 }

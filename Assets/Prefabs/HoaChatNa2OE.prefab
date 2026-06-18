@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8015464970931424869}
   - component: {fileID: 7323961222446743020}
   - component: {fileID: 1057677767754469509}
-  - component: {fileID: 825009573098641994}
-  - component: {fileID: -3864559964447604942}
-  - component: {fileID: -4541524803330625987}
+  - component: {fileID: 7525961704392364752}
+  - component: {fileID: -1276919211298836994}
+  - component: {fileID: 7518512645566744229}
   m_Layer: 0
   m_Name: HoaChatNa2OE
   m_TagString: Na2O
@@ -32,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 3864713495835286357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28, y: 0.014, z: -0.141}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.1954, y: 0.1122, z: -0.141}
+  m_LocalScale: {x: 1.6771697, y: 1.4995109, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 99
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2078486867412160229, guid: 3061f1b410533b2438d881d8ae6814a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -149,8 +149,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &825009573098641994
-CircleCollider2D:
+--- !u!114 &7525961704392364752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864713495835286357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc6f01f36f98684aa8f73db3c77ccc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragObject
+--- !u!61 &-1276919211298836994
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,9 +195,19 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0006838739, y: 0}
-  m_Radius: 0.13388997
---- !u!114 &-3864559964447604942
+  m_Offset: {x: 0, y: -0.0011692718}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.25}
+    newSize: {x: 0.25, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.25, y: 0.25233853}
+  m_EdgeRadius: 0
+--- !u!114 &7518512645566744229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,21 +216,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3864713495835286357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bc9d176d98c26438329683835ad246, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb067d7913d85f479a8af8eb18499fc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
-  noiDung: "H\xECnh d\u1EA1ng:\nCh\u1EA5t r\u1EAFn m\xE0u tr\u1EAFng.\n\nNguy hi\u1EC3m:\nPh\u1EA3n
-    \u1EE9ng m\u1EA1nh v\u1EDBi n\u01B0\u1EDBc, c\xF3 th\u1EC3 g\xE2y b\u1ECFng h\xF3a
-    h\u1ECDc."
---- !u!114 &-4541524803330625987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3864713495835286357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c8b8729015fa5c4da6d4ccd5618201e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChemicalFallCheck
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipObject
+  noiDung: "H\xF3a ch\u1EA5t Na<sub>2</sub>O (Natri oxit - Sodium oxide) l\xE0 m\u1ED9t
+    oxit baz\u01A1 r\u1EA5t m\u1EA1nh c\u1EE7a kim lo\u1EA1i ki\u1EC1m.\n\nTr\u1EA1ng
+    th\xE1i: L\xE0 ch\u1EA5t r\u1EAFn, d\u1EA1ng b\u1ED9t ho\u1EB7c tinh th\u1EC3.\n\n\u0110\u1EB7c
+    t\xEDnh \u0111\u1EB7c bi\u1EC7t: C\xF3 t\xEDnh h\xFAt \u1EA9m c\u1EF1c k\u1EF3
+    m\u1EA1nh, c\u1EA7n \u0111\u01B0\u1EE3c x\u1EED l\xFD c\u1EA9n th\u1EADn trong
+    c\xE1c ph\xF2ng th\xED nghi\u1EC7m."
+  ketThucTutorial: 0

@@ -10,6 +10,17 @@ TagManager:
   - HCL
   - Trashable
   - CaO
+  - Table
+  - WaterZone
+  - CocRong
+  - ChaiNuoc
+  - CocNuoc
+  - NutExit
+  - Balo
+  - O_GangTay
+  - BangNhiemVu
+  - BangThoiGian
+  - NutThongtinE
   layers:
   - Default
   - TransparentFX

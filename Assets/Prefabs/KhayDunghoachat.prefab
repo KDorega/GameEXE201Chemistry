@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7582734899146600740}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: ViTriDatHoaChat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4794686020832544620}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 1.71, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0.4, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,11 +42,11 @@ GameObject:
   - component: {fileID: 8914103040851707793}
   - component: {fileID: 3463436426653049387}
   - component: {fileID: 4266808325743513056}
-  - component: {fileID: -6015001275870624895}
-  - component: {fileID: 6342006104311001007}
   - component: {fileID: 8485561915166545943}
-  - component: {fileID: 324067566058554297}
-  - component: {fileID: 1570959733933139736}
+  - component: {fileID: 1491905191271794781}
+  - component: {fileID: 5489063907244956085}
+  - component: {fileID: 3422188462464648179}
+  - component: {fileID: 2703589905573083829}
   m_Layer: 0
   m_Name: KhayDunghoachat
   m_TagString: Tray
@@ -63,8 +63,8 @@ Transform:
   m_GameObject: {fileID: 8969673083419168773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.56361, y: -2.43089, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: -1.3808, y: -2.43089, z: 0}
+  m_LocalScale: {x: 0.28236002, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7582734899146600740}
@@ -156,64 +156,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-6015001275870624895
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8969673083419168773}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.024196386, y: 0.003772974}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.44, y: 2.74}
-    newSize: {x: 4.44, y: 2.74}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 4.3916078, y: 2.132206}
-  m_EdgeRadius: 0
---- !u!114 &6342006104311001007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8969673083419168773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240587c9aff46b342897de5f07c4f204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoveCocNuoc
 --- !u!60 &8485561915166545943
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -260,32 +202,37 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.379341, y: 0.8298111}
-      - {x: 1.702118, y: 0.76514125}
-      - {x: 1.8108393, y: -0.08000255}
-      - {x: 1.0497643, y: -0.4208207}
-      - {x: -0.02270782, y: -0.5477742}
-      - {x: -0.04265356, y: -1.3635707}
-      - {x: 1.3578545, y: -1.1628095}
-      - {x: 1.9628694, y: -0.75256705}
-      - {x: 2.19652, y: -0.49408674}
-      - {x: 2.1901639, y: 0.4482925}
-      - {x: 2.0700672, y: 0.7470429}
-      - {x: 1.105719, y: 1.229863}
-    - - {x: -1.5064065, y: 0.85424185}
-      - {x: -1.1239659, y: 0.93522906}
-      - {x: -0.9846728, y: 1.2342227}
-      - {x: -1.5654217, y: 1.0203826}
-      - {x: -2.154081, y: 0.5786892}
-      - {x: -2.1759925, y: -0.5285907}
-      - {x: -1.7354825, y: -1.0173706}
-      - {x: -0.8763908, y: -1.2879479}
-      - {x: 0.011301994, y: -1.341294}
-      - {x: -0.008407116, y: -0.5134094}
-      - {x: -1.042205, y: -0.42787194}
-      - {x: -1.9152672, y: 0.06934863}
+    - - {x: -2.203859, y: 0.4986632}
+      - {x: -2.2087054, y: 1.1402476}
+      - {x: -2.1171541, y: 1.6040337}
+      - {x: -1.7571573, y: 1.685319}
+      - {x: -1.8271291, y: 1.4056897}
+      - {x: -1.8843656, y: 1.2942505}
+      - {x: -1.9215063, y: 0.9819555}
+      - {x: -1.9960892, y: 0.5222964}
+      - {x: -1.2812485, y: 0.19792438}
+      - {x: -1.1105183, y: 0.17618299}
+      - {x: -1.0053371, y: 0.24956942}
+      - {x: -0.6914686, y: 0.23106217}
+      - {x: -0.4455136, y: 0.24370193}
+      - {x: -0.08379388, y: 0.205096}
+      - {x: 0.3266765, y: 0.22400022}
+      - {x: 0.8654053, y: 0.21378756}
+      - {x: 0.91170204, y: 0.28639793}
+      - {x: 1.0209575, y: 0.23972869}
+      - {x: 1.2232299, y: 0.26923656}
+      - {x: 2.0143585, y: 0.525589}
+      - {x: 1.9402287, y: 0.70997}
+      - {x: 1.9431529, y: 0.8802283}
+      - {x: 1.870255, y: 1.0326898}
+      - {x: 1.7157661, y: 1.7297292}
+      - {x: 2.023962, y: 1.6949654}
+      - {x: 2.1584206, y: 0.9866166}
+      - {x: 2.1880999, y: 0.52250624}
+      - {x: 2.189956, y: -0.9538603}
+      - {x: -2.2007656, y: -0.951457}
   m_UseDelaunayMesh: 1
---- !u!114 &324067566058554297
+--- !u!114 &1491905191271794781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,11 +241,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8969673083419168773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90cfea8bcb12eea4794f08dea3ad51bc, type: 3}
+  m_Script: {fileID: 11500000, guid: dbc6f01f36f98684aa8f73db3c77ccc4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrayHolder
-  spawnPoint: {fileID: 7582734899146600740}
---- !u!114 &1570959733933139736
+  m_EditorClassIdentifier: Assembly-CSharp::DragObject
+--- !u!114 &5489063907244956085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,8 +253,65 @@ MonoBehaviour:
   m_GameObject: {fileID: 8969673083419168773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bc9d176d98c26438329683835ad246, type: 3}
+  m_Script: {fileID: 11500000, guid: 5abb08e52a177974ba80796545d9c879, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
-  noiDung: "T\xEAn:\nKhay \u0110\u1EF1ng\n\nC\xF4ng d\u1EE5ng:\n\u0110\u1EC3 \u0111\u1EF1ng
-    ch\u1EA5t r\u1EAFn nh\u01B0 BaO, CaO,..."
+  m_EditorClassIdentifier: Assembly-CSharp::KhayDungHoaChatController
+--- !u!61 &3422188462464648179
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969673083419168773}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.44, y: 2.74}
+    newSize: {x: 4.44, y: 2.74}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.44, y: 2.74}
+  m_EdgeRadius: 0
+--- !u!114 &2703589905573083829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969673083419168773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb067d7913d85f479a8af8eb18499fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipObject
+  noiDung: "Khay \u0111\u1EF1ng h\xF3a ch\u1EA5t"

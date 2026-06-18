@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1247859043345300915}
   - component: {fileID: 3143170087276065300}
   - component: {fileID: 1385686993141899851}
-  - component: {fileID: 6421412725715746943}
-  - component: {fileID: 6637264241873200411}
-  - component: {fileID: 4280688254399301219}
-  - component: {fileID: 3742256523993589984}
+  - component: {fileID: 9000442073371309657}
+  - component: {fileID: -5950377724446066080}
+  - component: {fileID: 5379978691549900547}
+  - component: {fileID: 2014040087033043596}
   m_Layer: 0
   m_Name: CaO
   m_TagString: CaO
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 4556115190639807382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2871, y: 1.1184, z: 0}
-  m_LocalScale: {x: 0.12703966, y: 0.16007186, z: 1}
+  m_LocalPosition: {x: -7.2572, y: 1.132, z: 0}
+  m_LocalScale: {x: 0.15220167, y: 0.14765029, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 99
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6573886358919459776, guid: ae30caed42d09fe489fc9abdce65b53f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,8 +123,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6421412725715746943
-CircleCollider2D:
+--- !u!114 &9000442073371309657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556115190639807382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc6f01f36f98684aa8f73db3c77ccc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragObject
+--- !u!114 &-5950377724446066080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556115190639807382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36a4ce60891fdf4a94596e3f6f054be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoaChatController
+  framesPhanUng: []
+--- !u!61 &5379978691549900547
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -157,9 +182,19 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.042051088, y: 0.0055543343}
-  m_Radius: 1.1674311
---- !u!114 &6637264241873200411
+  m_Offset: {x: -0.028271914, y: 0.025904894}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.375, y: 2.1875}
+    newSize: {x: 0.38, y: 0.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.506936, y: 2.2652154}
+  m_EdgeRadius: 0
+--- !u!114 &2014040087033043596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,36 +203,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4556115190639807382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244bbebac7f2c9c49a11c2c307148c7a, type: 3}
+  m_Script: {fileID: 11500000, guid: ffb067d7913d85f479a8af8eb18499fc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Mover
-  moveSpeed: 20
---- !u!114 &4280688254399301219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4556115190639807382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a921b036e5c0eb458b075fd2e28b006, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gravity
---- !u!114 &3742256523993589984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4556115190639807382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73bc9d176d98c26438329683835ad246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
-  noiDung: "H\xECnh d\u1EA1ng:\nCh\u1EA5t r\u1EAFn d\u1EA1ng c\u1EE5c ho\u1EB7c b\u1ED9t
-    m\xE0u tr\u1EAFng.\n\nNguy hi\u1EC3m:\nPh\u1EA3n \u1EE9ng m\xE3nh li\u1EC7t v\u1EDBi
-    n\u01B0\u1EDBc, t\u1ECFa nhi\u1EC7t l\u01B0\u1EE3ng c\u1EF1c cao.\nC\xF3 t\xEDnh
-    \u0103n m\xF2n m\u1EA1nh, c\xF3 th\u1EC3 g\xE2y b\u1ECFng h\xF3a h\u1ECDc nghi\xEAm
-    tr\u1ECDng"
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipObject
+  noiDung: " CaO (Canxi oxit - Calcium oxide) g\u1ECDi l\xE0 v\xF4i s\u1ED1ng ho\u1EB7c
+    v\xF4i nung, l\xE0 m\u1ED9t oxit baz\u01A1 m\u1EA1nh c\u1EE7a kim lo\u1EA1i ki\u1EC1m
+    th\u1ED5. \n\nM\xE0u s\u1EAFc: M\xE0u tr\u1EAFng ho\u1EB7c tr\u1EAFng x\xE1m
+    (n\u1EBFu l\u1EABn t\u1EA1p ch\u1EA5t).\n\n\u0110\u1EB7c t\xEDnh: H\xFAt \u1EA9m
+    r\u1EA5t m\u1EA1nh, c\u1EA7n \u0111\u01B0\u1EE3c x\u1EED l\xFD c\u1EA9n th\u1EADn
+    trong c\xE1c ph\xF2ng th\xED nghi\u1EC7m."
+  ketThucTutorial: 0

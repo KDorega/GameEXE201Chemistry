@@ -12,11 +12,19 @@ GameObject:
   - component: {fileID: 2321271085396129878}
   - component: {fileID: 1962759680210105922}
   - component: {fileID: 4089097494298985096}
+<<<<<<< HEAD
   - component: {fileID: 9109560016796313118}
   - component: {fileID: -1240460548252514254}
   - component: {fileID: 5381246338486982979}
   - component: {fileID: -9197164037868350831}
   - component: {fileID: -5730554677422232584}
+=======
+  - component: {fileID: 8851241081650344689}
+  - component: {fileID: 9109560016796313118}
+  - component: {fileID: 5212998460858016507}
+  - component: {fileID: -1240460548252514254}
+  - component: {fileID: 5381246338486982979}
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
   m_Layer: 0
   m_Name: LoChuaChatHCL
   m_TagString: HCL
@@ -171,6 +179,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< HEAD
+=======
+--- !u!114 &8851241081650344689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935168369217771062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a921b036e5c0eb458b075fd2e28b006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gravity
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 --- !u!60 &9109560016796313118
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -227,6 +250,25 @@ PolygonCollider2D:
       - {x: -1.0675237, y: 2.2674608}
       - {x: -1.4768095, y: 1.299931}
   m_UseDelaunayMesh: 1
+<<<<<<< HEAD
+=======
+--- !u!114 &5212998460858016507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935168369217771062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bc9d176d98c26438329683835ad246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
+  noiDung: "T\xEAn: \nL\u1ECD dung d\u1ECBch HCL\n\nC\xE1ch d\xF9ng:\nNh\u1EA5n Double
+    click \u0111\u1EC3 m\u1EDF ho\u1EB7c \u0111\xF3ng n\u1EAFp.\n\nNguy hi\u1EC3m:
+    \nC\xF3 t\xEDnh \u0103n m\xF2n v\xE0 \u0111\u1ED9c h\u1EA1i cao n\u1EBFu ti\u1EBFp
+    x\xFAc v\xE0o da."
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 --- !u!114 &-1240460548252514254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HCLBottle
   closedSprite: {fileID: -2375964903085901752, guid: 746937778889f414bb4a44cf861c322d, type: 3}
   openedSprite: {fileID: 4982607324628922780, guid: e17cd4d72f15b184b81267caa4c43b99, type: 3}
+<<<<<<< HEAD
   cocHCLPrefab: {fileID: 88005199214710317, guid: b9f644628118edf4782c92559ec3368a, type: 3}
   audioSource: {fileID: 0}
   amThanhDoHCL: {fileID: 8300000, guid: 2cb68a54f1b1ae74b9814941a0cd5f65, type: 3}
@@ -293,3 +336,6 @@ MonoBehaviour:
   amThanhDoHCL: {fileID: 8300000, guid: 2cb68a54f1b1ae74b9814941a0cd5f65, type: 3}
   tocDoAmThanh: 1.5
   soLanSuDung: 3
+=======
+  isOpened: 0
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316

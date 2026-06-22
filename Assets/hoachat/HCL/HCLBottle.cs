@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 using System.Collections;
+=======
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 using UnityEngine;
 
 public class HCLBottle : MonoBehaviour
@@ -6,6 +9,7 @@ public class HCLBottle : MonoBehaviour
     public Sprite closedSprite;
     public Sprite openedSprite;
 
+<<<<<<< HEAD
     [Header("Spawn")]
     public GameObject cocHCLPrefab;
 
@@ -18,10 +22,13 @@ public class HCLBottle : MonoBehaviour
     [SerializeField]
     private int soLanSuDung = 3;
 
+=======
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
     private SpriteRenderer sr;
 
     public bool isOpened = false;
 
+<<<<<<< HEAD
     private bool dangDoNuoc = false;
     private float lastClickTime = 0f;
 
@@ -37,6 +44,13 @@ public class HCLBottle : MonoBehaviour
     {
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
+=======
+    private float lastClickTime = 0f;
+
+    void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
     }
 
     void OnMouseDown()
@@ -49,11 +63,14 @@ public class HCLBottle : MonoBehaviour
         lastClickTime = Time.time;
     }
 
+<<<<<<< HEAD
     void OnMouseUp()
     {
         KiemTraDoNuoc();
     }
 
+=======
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
     void ToggleBottle()
     {
         isOpened = !isOpened;
@@ -67,6 +84,7 @@ public class HCLBottle : MonoBehaviour
             sr.sprite = closedSprite;
         }
     }
+<<<<<<< HEAD
 
     public void KiemTraDoNuoc()
     {
@@ -139,4 +157,6 @@ public class HCLBottle : MonoBehaviour
             audioSource.pitch = 1f;
         }
     }
+=======
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 }

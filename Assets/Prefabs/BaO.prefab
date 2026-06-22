@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &3592676077089578448
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +32,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8665901536926676564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 --- !u!1 &6874120998009763155
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,10 +45,18 @@ GameObject:
   - component: {fileID: 8665901536926676564}
   - component: {fileID: 6797985571818175272}
   - component: {fileID: 6876772439158787510}
+<<<<<<< HEAD
   - component: {fileID: 1726035293503440836}
   - component: {fileID: 3766358312916661389}
   - component: {fileID: 7396329125335809359}
   - component: {fileID: 1364504730908342888}
+=======
+  - component: {fileID: 2390328836335416031}
+  - component: {fileID: 2615484718290371708}
+  - component: {fileID: 3278182783618780517}
+  - component: {fileID: -4674278188867695075}
+  - component: {fileID: -4082014848073218594}
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
   m_Layer: 0
   m_Name: BaO
   m_TagString: BaO
@@ -62,11 +73,18 @@ Transform:
   m_GameObject: {fileID: 6874120998009763155}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.2442, y: -0.6769, z: 0}
   m_LocalScale: {x: 0.18965814, y: 0.15744065, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2669148716153148321}
+=======
+  m_LocalPosition: {x: 0.2558, y: -0.6669, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6797985571818175272
@@ -116,7 +134,11 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 99
+=======
+  m_SortingOrder: 11
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6717928714381668202, guid: d832878bff0cab2459286aafd615085a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,7 +177,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!114 &1726035293503440836
+=======
+--- !u!114 &2390328836335416031
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,6 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6874120998009763155}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: dbc6f01f36f98684aa8f73db3c77ccc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragObject
@@ -194,6 +221,14 @@ MonoBehaviour:
   - {fileID: 2040396551, guid: d832878bff0cab2459286aafd615085a, type: 3}
 --- !u!61 &7396329125335809359
 BoxCollider2D:
+=======
+  m_Script: {fileID: 11500000, guid: 244bbebac7f2c9c49a11c2c307148c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mover
+  moveSpeed: 20
+--- !u!58 &2615484718290371708
+CircleCollider2D:
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -226,6 +261,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
+<<<<<<< HEAD
   m_Offset: {x: -0.0030850172, y: 0.00000017881393}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,6 +275,11 @@ BoxCollider2D:
   m_Size: {x: 2.4165776, y: 2.5888295}
   m_EdgeRadius: 0
 --- !u!114 &1364504730908342888
+=======
+  m_Offset: {x: -0.037896782, y: 0.008390099}
+  m_Radius: 1.1702265
+--- !u!114 &3278182783618780517
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,6 +288,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6874120998009763155}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ffb067d7913d85f479a8af8eb18499fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipObject
@@ -256,3 +298,35 @@ MonoBehaviour:
     \u0111\u1ED9c h\u1EA1i, c\u1EA7n \u0111\u01B0\u1EE3c x\u1EED l\xFD c\u1EA9n th\u1EADn
     trong c\xE1c ph\xF2ng th\xED nghi\u1EC7m."
   ketThucTutorial: 0
+=======
+  m_Script: {fileID: 11500000, guid: 6a921b036e5c0eb458b075fd2e28b006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gravity
+--- !u!114 &-4674278188867695075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874120998009763155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bc9d176d98c26438329683835ad246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemInfo
+  noiDung: "H\xECnh d\u1EA1ng:\nCh\u1EA5t r\u1EAFn k\u1EBFt tinh m\xE0u tr\u1EAFng.\n\nNguy
+    hi\u1EC3m:\n\u0110\u1ED9c t\xEDnh cao, c\u1EA7n mang b\u1EA3o h\u1ED9 tr\u01B0\u1EDBc
+    khi s\u1EED d\u1EE5ng."
+--- !u!114 &-4082014848073218594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874120998009763155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8b8729015fa5c4da6d4ccd5618201e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChemicalFallCheck
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316

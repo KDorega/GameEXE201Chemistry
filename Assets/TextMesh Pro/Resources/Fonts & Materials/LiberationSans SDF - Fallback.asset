@@ -112,9 +112,15 @@ Material:
     - _Parallax: 0.02
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
+<<<<<<< HEAD
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
     - _ScaleRatioC: 0.73125
+=======
+    - _ScaleRatioA: 0.90909094
+    - _ScaleRatioB: 0.73125
+    - _ScaleRatioC: 0.7386364
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -236,6 +242,7 @@ MonoBehaviour:
   m_FontFeatureTable:
     m_MultipleSubstitutionRecords: []
     m_LigatureSubstitutionRecords: []
+<<<<<<< HEAD
     m_GlyphPairAdjustmentRecords:
     - m_FirstAdjustmentRecord:
         m_GlyphIndex: 3
@@ -1077,6 +1084,9 @@ MonoBehaviour:
           m_XAdvance: 0
           m_YAdvance: 0
       m_FeatureLookupFlags: 0
+=======
+    m_GlyphPairAdjustmentRecords: []
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
     m_MarkToBaseAdjustmentRecords: []
     m_MarkToMarkAdjustmentRecords: []
   m_ShouldReimportFontFeatures: 0

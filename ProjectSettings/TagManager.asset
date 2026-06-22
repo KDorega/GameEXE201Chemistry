@@ -10,6 +10,7 @@ TagManager:
   - HCL
   - Trashable
   - CaO
+<<<<<<< HEAD
   - Table
   - WaterZone
   - CocRong
@@ -22,6 +23,8 @@ TagManager:
   - BangThoiGian
   - NutThongtinE
   - CocHCl
+=======
+>>>>>>> 32965e3c5e84e105d25e12169c3d4bc3c68e3316
   layers:
   - Default
   - TransparentFX

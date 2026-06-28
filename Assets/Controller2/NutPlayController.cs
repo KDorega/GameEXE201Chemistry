@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NutPlayController : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class NutPlayController : MonoBehaviour
         }
 
         XoaTatCaVatPham();
+
+        // Reload scene để reset toàn bộ trạng thái về ban đầu,
+        // bao gồm các trạng thái đặt/chưa đặt và các đối tượng gameplay.
+        SceneManager.LoadScene(
+            SceneManager.GetActiveScene().name
+        );
     }
 
     private void XoaTatCaVatPham()

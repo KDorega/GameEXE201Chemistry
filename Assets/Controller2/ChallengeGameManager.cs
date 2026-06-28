@@ -11,6 +11,12 @@ public class ChallengeGameManager : MonoBehaviour
     [SerializeField]
     private TMP_Text thoiGianText;
 
+    [SerializeField]
+    public AudioClip nhacChienThang; // Kéo file nhạc thắng vào ô này ở Inspector
+    
+    [SerializeField]
+    public AudioClip nhacNenManTiepTheo; // Kéo file nhạc màn chơi tiếp theo vào đây
+
     private int diem = 100;
 
     private float thoiGian = 30f;
@@ -46,6 +52,7 @@ public class ChallengeGameManager : MonoBehaviour
             if (!daLuuDiem)
             {
                 LuuDiem();
+                ThangManChoi();
             }
             return;
         }
@@ -95,6 +102,16 @@ public class ChallengeGameManager : MonoBehaviour
             "Thời gian: " +
             Mathf.CeilToInt(thoiGian);
     }
+
+    public void ThangManChoi()
+    {
+        // 1. Gọi dòng này để AudioManager đổi nhạc xuyên suốt quá trình chuyển cảnh
+        BackgroundMusic.instance.PlayVictoryAndChangeMusic(nhacChienThang, nhacNenManTiepTheo);
+
+        // 2. Tiến hành chuyển Scene sang màn chơi phụ hoặc màn tiếp theo
+        // UnityEngine.SceneManagement.SceneManager.LoadScene("TenManChoiPhu");
+    }
+
     public void ResetGame()
     {
         diem = 100;

@@ -171,6 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChallengeGameManager
   diemText: {fileID: 233115091}
   thoiGianText: {fileID: 461324578}
+  nhacChienThang: {fileID: 0}
+  nhacNenManTiepTheo: {fileID: 0}
 --- !u!114 &62343688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,6 +4093,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChallengeGameManager
   diemText: {fileID: 233115091}
   thoiGianText: {fileID: 461324578}
+  nhacChienThang: {fileID: 8300000, guid: 8dea9e4372b17234e952c27526824528, type: 3}
+  nhacNenManTiepTheo: {fileID: 8300000, guid: 9821891689ce4854bb7a3782194d2903, type: 3}
 --- !u!4 &1705773352
 Transform:
   m_ObjectHideFlags: 0
